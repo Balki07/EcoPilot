@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoPilot – Campus Sustainability Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true"></span>
+        <div>
+          <h1>EcoPilot</h1>
+          <p class="tagline">AI-Powered Campus Sustainability Assistant</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Tab Navigation ──────────────────────────────────────────────────── -->
+  <nav class="tab-nav" role="tablist" aria-label="EcoPilot features">
+    <button class="tab-btn active" data-tab="dashboard" role="tab" aria-selected="true" aria-controls="tab-dashboard">
+      Dashboard
+    </button>
+    <button class="tab-btn" data-tab="chat" role="tab" aria-selected="false" aria-controls="tab-chat">
+      Eco Chat
+    </button>
+    <button class="tab-btn" data-tab="calculator" role="tab" aria-selected="false" aria-controls="tab-calculator">
+      Calculator
+    </button>
+    <button class="tab-btn" data-tab="checklist" role="tab" aria-selected="false" aria-controls="tab-checklist">
+      Daily Checklist
+    </button>
+    <button class="tab-btn" data-tab="planner" role="tab" aria-selected="false" aria-controls="tab-planner">
+      AI Planner
+    </button>
+    <button class="tab-btn" data-tab="profile" role="tab" aria-selected="false" aria-controls="tab-profile">
+      My Profile
+    </button>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────────────────────── -->
+  <main>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 0: DASHBOARD                                                    -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-dashboard" class="tab-panel active" role="tabpanel" aria-labelledby="tab-dashboard">
+
+      <!-- Hero -->
+      <div class="dash-hero">
+        <div class="dash-hero-text">
+          <h2 class="dash-title">Welcome to EcoPilot</h2>
+          <p class="dash-subtitle">
+            AI-powered guide to sustainable campus living — practical,
+            personalised, and grounded in real student life.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="dash-stats">
+
+        <div class="dash-stat-card">
+          <div class="dash-stat-label">Your Eco Score</div>
+          <div class="dash-stat-value" id="dash-score">100</div>
+          <div class="dash-stat-sub" id="dash-score-tier">Eco Champion</div>
+          <p class="dash-stat-hint">Adjust sliders in the Calculator tab to see your score update here.</p>
+        </div>
+
+        <div class="dash-stat-card">
+          <div class="dash-stat-label">Today's Checklist</div>
+          <div class="dash-stat-value" id="dash-checklist-count">0 / 8</div>
+          <div class="dash-stat-sub" id="dash-checklist-pct">0% complete</div>
+          <div class="dash-progress-bar-track" aria-hidden="true">
+            <div class="dash-progress-bar-fill" id="dash-checklist-fill"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="dash-cta">
+        <h3 class="dash-cta-title">Ready for a personalised sustainability plan?</h3>
+        <p class="dash-cta-desc">
+          Tell EcoPilot about your campus lifestyle and get AI-powered recommendations
+          tailored to your situation.
+        </p>
+        <button class="btn btn-primary btn-lg dash-cta-btn" data-tab="planner">
+          Get My Sustainability Plan
+        </button>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="dash-features">
+        <div class="dash-feature-card">
+          <div class="dash-feature-icon" aria-hidden="true">💬</div>
+          <h4>Eco Chat</h4>
+          <p>Ask EcoPilot about energy, water, waste, transport, or campus sustainability — anytime.</p>
+        </div>
+        <div class="dash-feature-card">
+          <div class="dash-feature-icon" aria-hidden="true">🗺️</div>
+          <h4>AI Planner</h4>
+          <p>Describe your habits and get a structured, personalised sustainability action plan.</p>
+        </div>
+        <div class="dash-feature-card">
+          <div class="dash-feature-icon" aria-hidden="true">📊</div>
+          <h4>Calculator</h4>
+          <p>Rate your daily habits with sliders and see your Eco Score update instantly.</p>
+        </div>
+        <div class="dash-feature-card">
+          <div class="dash-feature-icon" aria-hidden="true">✅</div>
+          <h4>Daily Checklist</h4>
+          <p>Track 8 daily sustainable actions. Progress resets automatically each day.</p>
+        </div>
+      </div>
+
+      <!-- Responsible AI Card -->
+<section class="responsible-ai-section">
+    <h2>RESPONSIBLE AI</h2>
+
+    <div class="rai-slider">
+        <div class="rai-track">
+
+            <div class="rai-card">
+                <h3>Fairness</h3>
+                <p>
+                    Contextual recommendations that respect your choices
+                    without judgment.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Transparency</h3>
+                <p>
+                    AI-generated content and profile context are clearly
+                    identified.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Ethics</h3>
+                <p>
+                    No harmful, discriminatory, manipulative, or unsupported
+                    recommendations.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Privacy</h3>
+                <p>
+                    Minimal profile information stored locally in your
+                    browser only.
+                </p>
+            </div>
+
+            <!-- Duplicate cards for seamless infinite scrolling -->
+
+            <div class="rai-card">
+                <h3>Fairness</h3>
+                <p>
+                    Contextual recommendations that respect your choices
+                    without judgment.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Transparency</h3>
+                <p>
+                    AI-generated content and profile context are clearly
+                    identified.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Ethics</h3>
+                <p>
+                    No harmful, discriminatory, manipulative, or unsupported
+                    recommendations.
+                </p>
+            </div>
+
+            <div class="rai-card">
+                <h3>Privacy</h3>
+                <p>
+                    Minimal profile information stored locally in your
+                    browser only.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 1: ECO CHAT                                                     -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-chat" class="tab-panel" role="tabpanel" aria-labelledby="tab-chat">
+      <div class="panel-header">
+        <h2>Eco Chat Assistant</h2>
+        <p class="panel-desc">
+          Ask EcoPilot anything about campus sustainability — energy, water,
+          waste, transport, or the environment.
+        </p>
+      </div>
+
+      <div class="chat-container">
+        <div id="chat-messages" class="chat-messages" aria-live="polite" aria-label="Chat messages">
+          <!-- Welcome message rendered by JS -->
+        </div>
+
+        <div class="chat-input-row">
+          <label for="chat-input" class="sr-only">Type your sustainability question</label>
+          <input
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="e.g. How can I save energy in my dorm room?"
+            autocomplete="off"
+            aria-label="Type your sustainability question"
+            maxlength="500"
+          />
+          <button id="chat-send" class="btn btn-primary" aria-label="Send message">Send</button>
+          <button id="chat-clear" class="btn btn-ghost" aria-label="Clear chat">Clear</button>
+        </div>
+
+        <p class="chat-disclaimer">
+          AI suggestions are for general awareness. Verify campus-specific policies
+          with your sustainability office.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 2: SUSTAINABILITY CALCULATOR                                     -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-calculator" class="tab-panel" role="tabpanel" aria-labelledby="tab-calculator">
+      <div class="panel-header">
+        <h2>Sustainability Calculator</h2>
+        <p class="panel-desc">
+          Rate your daily habits using the sliders below. Your sustainability
+          score updates instantly.
+        </p>
+      </div>
+
+      <div class="calc-layout">
+        <!-- Inputs -->
+        <div class="calc-inputs">
+
+          <div class="calc-item">
+            <label for="calc-transport">
+              Days per week using a car or motorbike
+              <span class="calc-value-label" id="val-transport">0</span>
+            </label>
+            <input type="range" id="calc-transport" min="0" max="7" value="0" step="1"
+              aria-label="Days per week using a car or motorbike" />
+            <div class="range-labels"><span>0 days</span><span>7 days</span></div>
+          </div>
+
+          <div class="calc-item">
+            <label for="calc-energy">
+              Hours per day leaving devices on standby
+              <span class="calc-value-label" id="val-energy">0</span>
+            </label>
+            <input type="range" id="calc-energy" min="0" max="12" value="0" step="1"
+              aria-label="Hours per day leaving devices on standby" />
+            <div class="range-labels"><span>0 hrs</span><span>12 hrs</span></div>
+          </div>
+
+          <div class="calc-item">
+            <label for="calc-waste">
+              Single-use plastic items used per day
+              <span class="calc-value-label" id="val-waste">0</span>
+            </label>
+            <input type="range" id="calc-waste" min="0" max="10" value="0" step="1"
+              aria-label="Single-use plastic items used per day" />
+            <div class="range-labels"><span>0 items</span><span>10 items</span></div>
+          </div>
+
+          <div class="calc-item">
+            <label for="calc-diet">
+              Meat-based meals per week
+              <span class="calc-value-label" id="val-diet">0</span>
+            </label>
+            <input type="range" id="calc-diet" min="0" max="21" value="0" step="1"
+              aria-label="Meat-based meals per week" />
+            <div class="range-labels"><span>0 meals</span><span>21 meals</span></div>
+          </div>
+
+        </div>
+
+        <!-- Score Display -->
+        <div class="calc-result">
+          <div class="score-circle" id="score-circle">
+            <span id="score-number">100</span>
+            <span class="score-label">/ 100</span>
+          </div>
+          <p id="score-tier" class="score-tier">Eco Champion</p>
+
+          <div id="calc-tips" class="calc-tips">
+            <h3>Your Improvement Tips</h3>
+            <ul id="tips-list"></ul>
+          </div>
+
+          <div class="sdg-note">
+            <span class="sdg-note-text">This score reflects your alignment with sustainable campus living.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 3: ECO ACTION CHECKLIST                                          -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-checklist" class="tab-panel" role="tabpanel" aria-labelledby="tab-checklist">
+      <div class="panel-header">
+        <h2>Daily Eco Checklist</h2>
+        <p class="panel-desc">
+          Check off the sustainable actions you've completed today. Your
+          progress resets automatically each day.
+        </p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-section">
+        <div class="progress-header">
+          <span id="progress-text">0 of 8 actions completed</span>
+          <span id="progress-pct">0%</span>
+        </div>
+        <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Checklist progress">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Actions List -->
+<!-- Add Custom Eco Action -->
+<div class="custom-checklist-add">
+  <input
+    type="text"
+    id="custom-action-input"
+    class="custom-action-input"
+    placeholder="Add your own eco action..."
+    maxlength="120"
+    aria-label="Add your own eco action"
+  />
+
+  <button
+    id="custom-action-add"
+    class="btn btn-primary"
+    type="button"
+  >
+    + Add Action
+  </button>
+</div>
+
+<!-- Actions List -->
+<ul
+  class="checklist"
+  id="checklist-items"
+  aria-label="Daily eco actions"
+>
+  <!-- Rendered by JS -->
+</ul>
+
+      <div class="checklist-footer">
+        <p class="checklist-note">
+          Your progress is saved in this browser and resets at midnight.
+        </p>
+        <button id="checklist-reset" class="btn btn-ghost btn-sm">Reset Today</button>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 4: AI ECO ACTION PLANNER                                        -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-planner" class="tab-panel" role="tabpanel" aria-labelledby="tab-planner">
+      <div class="panel-header">
+        <h2>AI Eco Action Planner</h2>
+        <p class="panel-desc">
+          Describe your campus lifestyle, sustainability habits, or an environmental concern.
+          EcoPilot will analyse your situation and return a personalised sustainability plan.
+        </p>
+      </div>
+
+      <!-- Transparency: How EcoPilot generates your plan -->
+      <details class="planner-how-it-works">
+        <summary class="planner-how-summary">How EcoPilot generates your plan</summary>
+        <div class="planner-how-body">
+          <ol class="planner-how-steps">
+            <li><strong>Your input</strong> — You describe your campus habits or sustainability concern in your own words.</li>
+            <li><strong>Optional profile context</strong> — If you have saved a profile, those preferences are included as background context (not verified facts).</li>
+            <li><strong>AI prompt processing</strong> — Your input and context are sent to an AI language model using a sustainability-focused prompt with fairness and ethics guidelines.</li>
+            <li><strong>AI-generated recommendations</strong> — The model returns a structured plan. Results are suggestions only and may not reflect your specific campus conditions, local policies, costs, or availability.</li>
+          </ol>
+          <p class="planner-how-note">
+            AI-generated guidance is based on the information provided and may not reflect all
+            local campus conditions, policies, costs, or environmental circumstances.
+            Verify campus-specific guidance with your sustainability office before acting.
+          </p>
+        </div>
+      </details>
+
+      <!-- Profile context indicator (shown when a profile is active) -->
+      <div id="planner-profile-context" class="planner-profile-context" hidden>
+        <!-- Populated by JS: "Analysing with your profile: Hostel | Two-wheeler | Energy" -->
+      </div>
+
+      <div class="planner-form">
+        <label for="planner-input" class="planner-label">
+          Describe your habits or concern:
+        </label>
+        <textarea
+          id="planner-input"
+          class="planner-textarea"
+          placeholder="e.g. I stay in a hostel, use my laptop around 8 hours a day, frequently buy bottled water, and travel by two-wheeler."
+          maxlength="1000"
+          rows="5"
+          aria-label="Describe your campus lifestyle or sustainability concern"
+        ></textarea>
+        <div class="planner-actions">
+          <button id="planner-submit" class="btn btn-primary">Analyse My Habits</button>
+          <span id="planner-char-count" class="planner-char-count">0 / 1000</span>
+        </div>
+      </div>
+
+      <!-- Loading state -->
+      <div id="planner-loading" class="planner-loading" hidden>
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="planner-loading-text">Analysing your habits…</span>
+      </div>
+
+      <!-- Error state -->
+      <div id="planner-error" class="planner-error" hidden></div>
+
+      <!-- Result card -->
+      <div id="planner-result" class="planner-result" hidden>
+        <div class="planner-result-header">
+          <span class="planner-ai-label">AI-Generated Sustainability Plan</span>
+          <div class="planner-meta">
+            <span id="plan-area-badge" class="planner-area-badge"></span>
+            <span id="plan-priority-badge" class="planner-priority-badge"></span>
+          </div>
+        </div>
+
+        <div class="planner-section">
+          <h3 class="planner-section-title">Situation Summary</h3>
+          <p id="plan-summary" class="planner-summary"></p>
+        </div>
+
+        <div class="planner-section">
+          <h3 class="planner-section-title">Recommendations</h3>
+          <ol id="plan-recommendations" class="planner-recommendations"></ol>
+        </div>
+
+        <div class="planner-section planner-action-box">
+          <h3 class="planner-section-title">Action for Today</h3>
+          <p id="plan-action-today" class="planner-action-today"></p>
+        </div>
+
+        <div class="planner-result-footer">
+          <span id="plan-sdg-badge" class="badge" style="display:none" aria-hidden="true"></span>
+          <p id="plan-disclaimer" class="planner-disclaimer"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- TAB 5: MY SUSTAINABILITY PROFILE                                    -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <section id="tab-profile" class="tab-panel" role="tabpanel" aria-labelledby="tab-profile">
+      <div class="panel-header">
+        <h2>My Sustainability Profile</h2>
+        <p class="panel-desc">
+          Your profile is optional. These preferences help EcoPilot provide more relevant
+          sustainability suggestions. You can use the AI Planner without creating a profile.
+        </p>
+      </div>
+
+      <div class="profile-card">
+
+        <div class="profile-card">
+
+  <!-- Personal Information -->
+  <div class="profile-field">
+    <label for="prof-name" class="profile-label">Name</label>
+    <input
+      type="text"
+      id="prof-name"
+      class="profile-input"
+      placeholder="Enter your name"
+      maxlength="80"
+      autocomplete="name"
+    />
+  </div>
+
+  <div class="profile-field">
+    <label for="prof-bio" class="profile-label">Short Bio</label>
+    <textarea
+      id="prof-bio"
+      class="profile-textarea"
+      placeholder="Tell us a little about yourself..."
+      maxlength="300"
+      rows="4"
+    ></textarea>
+    <div class="profile-character-count">
+      <span id="prof-bio-count">0 / 300</span>
+    </div>
+  </div>
+
+  <!-- Campus Living -->
+  <fieldset class="profile-fieldset">
+
+        <!-- Campus Living -->
+        <fieldset class="profile-fieldset">
+          <legend class="profile-legend">Campus Living</legend>
+          <div class="profile-radio-group">
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-living" value="Hostel" id="prof-hostel" />
+              <span>Hostel</span>
+            </label>
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-living" value="Day Scholar" id="prof-day" />
+              <span>Day Scholar</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Primary Transportation -->
+        <fieldset class="profile-fieldset">
+          <legend class="profile-legend">Primary Transportation</legend>
+          <div class="profile-radio-group">
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-transport" value="Walk" id="prof-walk" />
+              <span>Walk</span>
+            </label>
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-transport" value="Bicycle" id="prof-bicycle" />
+              <span>Bicycle</span>
+            </label>
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-transport" value="Bus" id="prof-bus" />
+              <span>Bus</span>
+            </label>
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-transport" value="Two-wheeler" id="prof-twowheeler" />
+              <span>Two-wheeler</span>
+            </label>
+            <label class="profile-radio-label">
+              <input type="radio" name="prof-transport" value="Car" id="prof-car" />
+              <span>Car</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Main Sustainability Concern -->
+        <div class="profile-field">
+          <label for="prof-concern" class="profile-label">Main Sustainability Concern</label>
+          <select id="prof-concern" class="profile-select" aria-label="Main sustainability concern">
+            <option value="">— Select a concern —</option>
+            <option value="Energy">Energy</option>
+            <option value="Water">Water</option>
+            <option value="Waste">Waste</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Responsible Consumption">Responsible Consumption</option>
+            <option value="General Sustainability">General Sustainability</option>
+          </select>
+        </div>
+
+        <!-- Actions -->
+        <div class="profile-actions">
+          <button id="profile-save" class="btn btn-primary">Save Profile</button>
+          <button id="profile-reset" class="btn btn-ghost">Reset Profile</button>
+        </div>
+
+        <!-- Inline confirmation -->
+        <p id="profile-confirm" class="profile-confirm" hidden>Profile saved successfully.</p>
+
+        <!-- Privacy & Data section -->
+        <div class="profile-privacy-section">
+          <h3 class="profile-privacy-title">Privacy &amp; Data</h3>
+          <ul class="profile-privacy-list">
+            <li>Your profile is optional — only preferences useful for personalisation are requested.</li>
+            <li>Profile data is saved in your browser's local storage on this device.</li>
+            <li>When you use the AI Planner, your selected profile fields and your written request are sent to the configured AI service to generate a response.</li>
+            <li>EcoPilot does not request unnecessary sensitive information and does not store data on a server.</li>
+          </ul>
+          <div class="profile-clear-section">
+            <button id="profile-clear-data" class="btn btn-ghost btn-sm">Clear My Local Data</button>
+            <p id="profile-clear-confirm" class="profile-clear-confirm" hidden>All local EcoPilot data has been cleared.</p>
+          </div>
+        </div>
+
+        <!-- AI usage note -->
+        <p class="profile-ai-note">
+          Profile context is used as optional background information for AI suggestions only.
+          It is never verified. Campus-specific policies should be confirmed with your campus
+          sustainability office.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      EcoPilot &mdash; AI for Campus Sustainability &nbsp;|&nbsp;
+      <em>Made with IBM Bob</em>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
