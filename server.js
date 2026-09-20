@@ -227,8 +227,8 @@ app.post("/api/analyze", async (req, res) => {
 });
 
 // ─── Start Server ──────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🌿 EcoPilot is running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`\n🌿 EcoPilot is running on port ${PORT}`);
   console.log(
     `   LLM provider: ${process.env.GROQ_API_KEY ? "Groq" : process.env.OPENAI_API_KEY ? "OpenAI" : "⚠️  None configured"}\n`
   );
