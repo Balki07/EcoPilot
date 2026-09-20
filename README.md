@@ -12,7 +12,7 @@
 ## 🚀 Live Demo
 
 **Live Application:**  
-https://YOUR-RENDER-URL.onrender.com
+https://ecopilot-vufo.onrender.com
 
 **GitHub Repository:**  
 https://github.com/Balki07/EcoPilot
