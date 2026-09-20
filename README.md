@@ -9,9 +9,6 @@
 ## Overview
 
 EcoPilot is a lightweight web application that helps university students make more sustainable decisions in their daily campus life. It uses conversational AI (prompt engineering — no model training), pure JavaScript logic, and browser storage to deliver practical sustainability tools.
-
-**No machine learning. No database. No authentication. No build tools.**
-
 ---
 
 ## Features
